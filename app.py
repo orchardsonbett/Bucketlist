@@ -11,3 +11,12 @@ app.config['MYSQL_DATABASE_PASSWORD'] = 'jay'
 app.config['MYSQL_DATABASE_DB'] = 'BucketList'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql.init_app(app)
+
+
+@app.route('/')
+def main():
+    return render_template('index.html')
+
+@app.route('/showSignUp')
+def showSignUp():
+    return render_template('signup.html')
